@@ -826,7 +826,7 @@ async def process_time(message: Message, state: FSMContext):
             await message.answer(i18n.get_text("future_time_error", locale))
             return
         
-        if delivery_time_utc > now_utc + timedelta(days=365 * 3):
+        if delivery_time_utc > now_utc + timedelta(days=365 * 50):
             await message.answer(i18n.get_text("max_time_error", locale))
             return
         
